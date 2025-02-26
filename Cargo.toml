@@ -1,0 +1,22 @@
+[package]
+name = "goofy-animals"
+description = "Generate a name in adjective-adjective-animal form"
+authors = ["Mark Vainomaa <mark@zentria.ee>"]
+version = "0.0.1"
+edition = "2021"
+rust-version = "1.77.0"
+
+[dependencies]
+const-str = "0.6.2"
+rand = { version = "0.8", default-features = false }
+tracing = { version = "0.1", default-features = false, features = ["attributes"], optional = true }
+
+[dev-dependencies]
+pretty_assertions = "1.4.1"
+rand_chacha = "0.3.1"
+tracing-test = { version = "0.2.5" }
+
+[features]
+default = ["alloc"]
+alloc = []
+tracing = ["dep:tracing"]
