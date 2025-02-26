@@ -4,6 +4,8 @@ description = "Generate a name in adjective-adjective-animal form"
 authors = ["Mark Vainomaa <mark@zentria.ee>"]
 version = "0.0.1"
 edition = "2021"
+license = "MPL-2.0"
+repository = "https://github.com/ZentriaMC/goofy-animals.git"
 rust-version = "1.77.0"
 
 [dependencies]
