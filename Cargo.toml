@@ -31,8 +31,9 @@ tracing-test = { version = "0.2.5" }
 [features]
 default = ["alloc"]
 alloc = []
+std = ["alloc"]
 examples = ["alloc", "rand/getrandom", "dep:rand_chacha"]
-tracing = ["dep:tracing"]
+tracing = ["std", "dep:tracing"]
 
 [[bin]]
 name = "goofy-animal"

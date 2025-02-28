@@ -1,9 +1,11 @@
 #![doc = include_str!("../README.md")]
 #![cfg_attr(docsrs, feature(doc_cfg))]
-#![no_std]
+#![cfg_attr(not(feature = "std"), no_std)]
 
 #[cfg(feature = "alloc")]
 extern crate alloc;
+
+use core::fmt::{Debug, Formatter};
 
 use rand::Rng;
 
@@ -212,6 +214,15 @@ impl<'a> GoofyAnimals<'a> {
         let (adjective_one, adjective_two, animal) = self.generate_name_parts(rng);
 
         ::alloc::format!("{adjective_one}-{adjective_two}-{animal}")
+    }
+}
+
+impl Debug for GoofyAnimals<'_> {
+    fn fmt(&self, f: &mut Formatter<'_>) -> core::fmt::Result {
+        f.debug_struct("GoofyAnimals")
+            .field("total_adjectives", &self.adjectives.len())
+            .field("total_animals", &self.animals.len())
+            .finish()
     }
 }
 
