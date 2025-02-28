@@ -35,7 +35,7 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-goofy-animals = "0.0.1"
+goofy-animals = "0.0.3"
 ```
 
 ## Usage
