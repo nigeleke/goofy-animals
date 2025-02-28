@@ -95,6 +95,7 @@ fn main() {
 ## Feature flags
 
 - `alloc` (default): Enables the `generate_name` function that returns a `String`
+- `std`: _Used only for testing_
 - `tracing`: Adds tracing instrumentation for debugging
 - `examples`: Enables building the example binary `goofy-animal`
 
