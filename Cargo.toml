@@ -27,6 +27,8 @@ tracing = { version = "0.1", default-features = false, features = ["attributes"]
 pretty_assertions = "1.4.1"
 rand_chacha = "0.3.1"
 tracing-test = { version = "0.2.5" }
+# No clean way to enable feature flags for testing, but this works
+goofy-animals = { path = ".", features = ["alloc", "std", "examples", "tracing"] }
 
 [features]
 default = ["alloc"]
