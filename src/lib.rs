@@ -1,3 +1,4 @@
+#![allow(clippy::needless_doctest_main)]
 #![doc = include_str!("../README.md")]
 #![cfg_attr(docsrs, feature(doc_cfg))]
 #![cfg_attr(not(feature = "std"), no_std)]
